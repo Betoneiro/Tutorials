@@ -1,6 +1,6 @@
 # Tutorials
 In this repository I'll store every tutorial I follow. I'll do this to not only practice and learn new things, but also to keep track of my progress.
-I intend to write a descriptive section to each tutorial while maintaing a pattern. This will make my study more robust and, also, easier to follow.
+I intend to write a descriptive section to each tutorial while maintaing a pattern. This will make my study more robust and easier to follow.
 Now let's list and comment about each tutorial.
 
 ## 1 - NFT  Website Design 🐵
