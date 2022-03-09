@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- FIRST STEP, starting the HTML file with "! + tab" to write the basic HTML elements automatically -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Here I linked an external font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Here I linked our HTML to the CSS file with an easy "link + tab" action. -->
+    <link rel="stylesheet" href="style.css" />
+    <title>NFT Jungle</title>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" id="navbar-logo">NFT</a>
+
+        <!-- This div is responsible for the mobile navbar -->
+        <div class="navbar-toggle" id="mobile-menu">
+          <!-- These are the bars of the mobile menu -->
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <!-- This here is the actual navbar, containing all the main links such as HOME and etc.
+              A general UL is created and, inside it, each LI with their A tags (which will hold the link name) -->
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a href="/" class="navbar-links">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="/" class="navbar-links">Explore</a>
+          </li>
+          <li class="navbar-item">
+            <a href="/" class="navbar-links">Gallery</a>
+          </li>
+          <li class="navbar-btn">
+            <a href="/" class="button">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>

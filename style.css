@@ -1,0 +1,97 @@
+/* General styling for the webpage. This removes default borders and paddings, also adding a specific font and changing the box sizing (border box defines the size of teh boxes by the width value) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Here I started styling the navbar by adding general rules, like background and position */
+.navbar {
+  background: #131313;
+  height: 80px;
+
+  /* This makes the contents inside the "navbar" box displayed side by side */
+  display: flex;
+
+  /* The two following declarations make the content stay at the center. This will help separating them each in their sides on the navbar.
+    "justify-content" is responsible for describing how the items of a box are distributed. */
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+
+  /* This makes the navbar stay at the top even after scrolling downwards */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Here I positioned the navbar elements */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+/* Here I colored and position the logo */
+#navbar-logo {
+  color: #fff;
+  display: flex;
+
+  /* "align items" helps us positioning the element inside itself, or in its own box. */
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+/* With this ruleset I made the navbar items stay side by side and aligned with the center.*/
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar-item {
+  height: 80px;
+}
+
+.navbar-links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.navbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
