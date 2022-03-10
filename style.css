@@ -59,20 +59,28 @@
   text-align: center;
 }
 
+/* I had to set the items height to be the same as the navbar itself. If it wasn't for it, then they wouldn't fill their entire box later on with "height: 100%" */
 .navbar-item {
   height: 80px;
 }
 
+/* This ruleset targets specifically the links of the LI, the words themselves. */
 .navbar-links {
   color: #fff;
+
+  /* This makes the links stay in the same axis as the button */
   display: flex;
   align-items: center;
   height: 100%;
   justify-content: center;
   text-decoration: none;
+
+  /* This is what keeps them separated */
   padding: 0 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
+/* Here I positioned the button */
 .navbar-btn {
   display: flex;
   align-items: center;
@@ -81,6 +89,7 @@
   width: 100%;
 }
 
+/* This is where I styled the sign in button itself */
 .button {
   display: flex;
   align-items: center;
@@ -94,4 +103,124 @@
   border: none;
   outline: none;
   border-radius: 4px;
+
+  /* We set the speed and behavior of the transition at the element's class */
+  transition: all 0.3s ease-in-out;
+}
+
+/* This is what makes the button change colors whenever we hover it (put our cursor on it) */
+.button:hover {
+  background: #782605;
+  color: #fff;
+}
+
+.navbar-links:hover {
+  color: #782605;
+  transform: scale(1.08);
+}
+
+/* Here goes the responsive styling. This media query is basically saying that, whenever the screen has a width of 960px, what's inside of it will override any other styling */
+@media screen and (max-width: 960px) {
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    max-width: 1300px;
+    padding: 0;
+  }
+
+  #navbar-logo {
+    padding-left: 25px;
+  }
+
+  /* This ruleset prepares the navbar to be responsive in some ways */
+  .navbar-menu {
+    /* Here, with these two declarations, we made the menu become a column and not a row anymore */
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+
+    /* These two declarations make the menu go up and out of the screen. "position: absolute" makes an elemente move freely in relation to its parent container */
+    position: absolute;
+    top: -1000px;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    height: 50vh;
+    z-index: -1;
+  }
+
+  /* This positions and styles the navbar on mobile */
+  .navbar-menu:active {
+    background: #131313;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+  }
+
+  /* This creates the hamburguer menu itself, setting the size and color of the bars */
+  .navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+  }
+
+  .navbar-item {
+    width: 100%;
+  }
+
+  .navbar-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .navbar-btn {
+    padding-bottom: 2rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    margin: 0;
+  }
+
+  /* This makes the bar visible */
+  .navbar-toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* This positions the ham menu */
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  /* This is the animation part when we click the ham menu. "nth-child" targets the direct children of the elemen before colon, and within parenthesis is the index of each child */
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  /* The following two rulesets rotates the first and third bars to create the animation */
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
