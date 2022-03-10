@@ -153,11 +153,11 @@
   }
 
   /* This positions and styles the navbar on mobile */
-  .navbar-menu:active {
+  .navbar-menu.active {
     background: #131313;
     top: 100%;
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
     z-index: 99;
     height: 50vh;
     font-size: 1.6rem;
@@ -223,4 +223,27 @@
   #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+}
+
+/* Hero Section Styles */
+
+/* This ruleset applies positioning to the first parte of the webpage's main content */
+.main-container {
+  /* This by itself doesn't change much. This happens because, initiallym there's only one column for the elements, which is very similar to the normal flow. It starts working once we set the grid template properly.
+  Either way, it is extremely important to understanding this key element that CSS Grid is.
+  Basically it is a way to define our webpage's layout in both horizontal and vertical levels.
+  What display: grid does is it enables us to start using grid in that specific container. */
+  display: grid;
+  /* This declaration states that the container will have two columns, each taking the available/left space (fr = fraction) on the screen. */
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: #141414;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding-right: 15px;
+  padding-left: 50px;
 }
