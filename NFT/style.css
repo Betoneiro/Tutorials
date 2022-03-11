@@ -110,12 +110,12 @@
 
 /* This is what makes the button change colors whenever we hover it (put our cursor on it) */
 .button:hover {
-  background: #782605;
+  background: #0071f3;
   color: #fff;
 }
 
 .navbar-links:hover {
-  color: #782605;
+  color: #8009af;
   transform: scale(1.08);
 }
 
@@ -227,6 +227,10 @@
 
 /* Hero Section Styles */
 
+.main {
+  background: #141414;
+}
+
 /* This ruleset applies positioning to the first parte of the webpage's main content */
 .main-container {
   /* This by itself doesn't change much. This happens because, initiallym there's only one column for the elements, which is very similar to the normal flow. It starts working once we set the grid template properly.
@@ -244,6 +248,296 @@
   z-index: 1;
   width: 100%;
   max-width: 1300px;
-  padding-right: 15px;
+  padding-right: 50px;
   padding-left: 50px;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.main-content h1 {
+  font: 1.5rem;
+  color: #fff;
+}
+
+.text-highlight {
+  color: #0071f3;
+}
+
+.main-content p {
+  font-size: 2.5rem;
+  margin-top: 8px;
+  font-weight: 100;
+  color: #dbdbdb;
+}
+
+.main-btn {
+  font-size: 1rem;
+  padding: 14px 32px;
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+.main-btn a {
+  position: relative;
+  z-index: 2;
+  color: #000;
+  text-decoration: none;
+}
+
+.main-btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #580578;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.main-btn:hover:after {
+  width: 100%;
+}
+
+.main-img-container {
+  text-align: center;
+}
+
+#main-img {
+  height: 425px;
+  width: 400px;
+  border-radius: 20px;
+}
+
+/* Mobile responsive */
+
+@media screen and (max-width: 758px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90vh;
+  }
+
+  .main-content {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .main-content h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .main-content p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    main-content h1 {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+
+    .main-content p {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .main-btn {
+      padding: 12px 36px;
+      margin: 2.5rem 0;
+    }
+  }
+}
+
+/* Images CSS */
+
+.images {
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.images h1 {
+  color: #fff;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.images-card {
+  transition: all 0.25s ease-in-out;
+  margin: 1rem;
+  height: 425px;
+  width: 400px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("images/monkey.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+.images-card:before {
+  opacity: 0.2;
+}
+
+.images-card:nth-child(2) {
+  margin: 1rem;
+  height: 425px;
+  width: 400px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("images/monkey-2.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+.images-card:nth-child(3) {
+  margin: 1rem;
+  height: 425px;
+  width: 400px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("images/monkey-3.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+.images-card:nth-child(4) {
+  margin: 1rem;
+  height: 425px;
+  width: 400px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("images/monkey-4.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+.images-card:nth-child(5) {
+  margin: 1rem;
+  height: 425px;
+  width: 400px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("images/cat.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+.images-card:nth-child(6) {
+  margin: 1rem;
+  height: 425px;
+  width: 400px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("images/cat-2.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+.images-card h2 {
+  position: absolute;
+  top: 350px;
+  left: 30px;
+  font-size: 1.2rem;
+}
+
+.images-card p {
+  position: absolute;
+  top: 380px;
+  left: 30px;
+  font-size: 0.8rem;
+}
+
+.images-card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .images h1 {
+    font-size: 2rem;
+    margin-top: 12rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .images h1 {
+    font-size: 1.2rem;
+  }
+
+  .images-card {
+    width: 300px;
+  }
+}
+
+/* Footer CSS */
+
+.footer-container {
+  background-color: #141414;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.website-rights {
+  color: #fff;
 }
